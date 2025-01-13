@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 import Button from "./component/button"
@@ -8,6 +8,11 @@ export default function heropage() {
         <SafeAreaView>
             <View style={styles.container}>
                 <View style={styles.maincontainer}>
+                    <View style={styles.textContainer}>
+                        <Pressable onPress={() => { }}>
+                            <Text style={styles.loginBtn}>login</Text>
+                        </Pressable>
+                    </View>
                     <Image source={require('./assets/heropageImg.png')} style={styles.heroImg} />
                     <View style={styles.txtcontainer}>
                         <Text style={styles.headingTxt}>Always Take Control of Your Finances</Text>
@@ -23,41 +28,9 @@ export default function heropage() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        height: '100%',
-        width: "100%",
-        margin: 0,
-        padding: 0,
-    },
-    maincontainer: {
-        height: '100%',
-        width: "100%",
-        margin: 0,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    heroImg: {
-        height: 400,
-        width: '100%',
-        marginTop: '35%'
-    },
-    txtcontainer: {
-        width: '70%',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    headingTxt: {
-        fontSize: 40,
-        color: '#414040',
-        fontWeight: 'bold',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center'
-
-    },
     bottomTxt: {
         fontSize: 15,
+        color: '#727D73',
         marginTop: 25,
         alignItems: 'center',
         justifyContent: 'center',
@@ -66,5 +39,47 @@ const styles = StyleSheet.create({
     },
     btn: {
         marginTop: 20,
-    }
+    },
+    container: {
+        flex: 1,
+        height: '100%',
+        width: "100%",
+        margin: 0,
+        padding: 0,
+    },
+    heroImg: {
+        height: 400,
+        width: '100%',
+        marginTop: '25%'
+    },
+    headingTxt: {
+        fontSize: 40,
+        color: '#343131',
+        fontWeight: 'bold',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center'
+    },
+    loginBtn: {
+        textAlign: "right",
+        marginRight: 15,
+        marginTop: 10,
+        fontSize: 25,
+        fontFamily: "Poppins-Medium"
+    },
+    maincontainer: {
+        height: '100%',
+        width: "100%",
+        margin: 0,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    textContainer: {
+        width: "100%",
+    },
+    txtcontainer: {
+        width: '70%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 })

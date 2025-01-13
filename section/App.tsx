@@ -1,5 +1,7 @@
 import React from 'react';
-import HeroPage from './home/heropage';
+import HeroPage from './login-signup/HeroPage';
+import LoginPage from "./login-signup/LoginPage"
+import Statics from './statistics/Statics';
 
 import {
   SafeAreaView,
@@ -15,7 +17,9 @@ function App(): React.JSX.Element {
     <SafeAreaView>
       <ScrollView>
         <View>
-          <HeroPage/>
+          {/* <HeroPage/> */}
+          {/* <LoginPage /> */}
+          <Statics />
         </View>
       </ScrollView>
     </SafeAreaView>
